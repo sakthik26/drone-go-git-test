@@ -6,34 +6,34 @@ workspace:
   path: src/github.com/sakthik26/go-drone-hello-world
 
 steps:
-#   - name: report
-#     image: golang
-#     volumes:
-#       - name: reports
-#         path: /var/reports
-#     commands:
-#       - mkdir -p /var/reports
-#       - go get
-#       - go get github.com/360EntSecGroup-Skylar/goreporter
-#       - goreporter -p ./ -f html -r /var/reports/
-    - name: test
-      image: golang
-      commands:
-        - go get
-        - go test
-   - name: build
-     image: golang
-     commands:
-       - go get
-       - go build -o output
-       - chmod +x output
-   - name: run
-     image: golang
-     commands:
-       - go get
-       - go build -o output
-       - chmod +x output
-       - ./output
+  - name: report
+    image: golang
+    volumes:
+      - name: reports
+        path: /var/reports
+    commands:
+      - mkdir -p /var/reports
+      - go get
+      - go get github.com/360EntSecGroup-Skylar/goreporter
+      - goreporter -p ./ -f html -r /var/reports/
+#     - name: test
+#       image: golang
+#       commands:
+#         - go get
+#         - go test
+#    - name: build
+#      image: golang
+#      commands:
+#        - go get
+#        - go build -o output
+#        - chmod +x output
+#    - name: run
+#      image: golang
+#      commands:
+#        - go get
+#        - go build -o output
+#        - chmod +x output
+#        - ./output
 # volumes:
 #   - name: reports
 #     host:
